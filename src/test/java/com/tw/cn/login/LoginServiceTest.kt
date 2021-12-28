@@ -1,6 +1,6 @@
 package com.tw.cn.login
 
-import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.*
@@ -19,8 +19,8 @@ internal class LoginServiceTest {
     @Test
     fun should_login_success_with_correct_request() {
         whenever(loginRepo.login(any())).thenReturn(LoginResponse(200))
-        val response = loginService.login("18008219018", "123456")
+        val result = loginService.login("18008219018", "123456")
 
-        assertEquals(200, response.status)
+        assertTrue(result)
     }
 }

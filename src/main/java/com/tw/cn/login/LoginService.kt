@@ -1,7 +1,11 @@
 package com.tw.cn.login
 
 class LoginService(private val loginRepo: LoginRepository) {
-    fun login(mobile: String, verifyCode: String): LoginResponse {
-        return loginRepo.login(LoginRequest(mobile, verifyCode))
+    companion object {
+        const val SUCCESS = 200
+    }
+    fun login(mobile: String, verifyCode: String): Boolean {
+        val response = loginRepo.login(LoginRequest(mobile, verifyCode))
+        return response.status == SUCCESS
     }
 }
