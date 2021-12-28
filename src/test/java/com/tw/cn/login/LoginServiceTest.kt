@@ -21,6 +21,6 @@ internal class LoginServiceTest {
         whenever(loginRepo.login(any())).thenReturn(LoginResponse(200))
         val response = loginService.login("18008219018", "123456")
 
-        assertEquals(123, response.status)
+        assertEquals(200, response.status)
     }
 }
