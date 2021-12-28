@@ -18,10 +18,9 @@ internal class LoginServiceTest {
 
     @Test
     fun should_login_success_with_correct_request() {
-//        doReturn(LoginResponse(200)).whenever(loginRepo).login(anyOrNull())
         whenever(loginRepo.login(any())).thenReturn(LoginResponse(200))
         val response = loginService.login("18008219018", "123456")
 
-        assertEquals(200, response.status)
+        assertEquals(123, response.status)
     }
 }
