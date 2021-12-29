@@ -23,4 +23,12 @@ internal class LoginServiceTest {
 
         assertTrue(result)
     }
+
+    @Test
+    fun should_login_success_with_correct_request_test_spy() {
+        whenever(loginRepo.login(any())).thenReturn(LoginResponse(200))
+        loginService.login("18008219018", "123456")
+
+        verify(loginRepo).release()
+    }
 }

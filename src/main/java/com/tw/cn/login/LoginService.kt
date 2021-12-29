@@ -6,6 +6,7 @@ class LoginService(private val loginRepo: LoginRepository) {
     }
     fun login(mobile: String, verifyCode: String): Boolean {
         val response = loginRepo.login(LoginRequest(mobile, verifyCode))
+        loginRepo.release()
         return response.status == SUCCESS
     }
 }

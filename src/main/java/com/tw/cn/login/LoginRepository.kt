@@ -5,4 +5,8 @@ class LoginRepository {
         //todo implement remote service
         return LoginResponse(123)
     }
+
+    fun release() {
+        TODO("Not yet implemented")
+    }
 }
