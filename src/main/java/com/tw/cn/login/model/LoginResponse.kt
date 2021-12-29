@@ -1,4 +1,4 @@
-package com.tw.cn.login
+package com.tw.cn.login.model
 
 class LoginResponse(val status: Int) {
 
