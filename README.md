@@ -11,5 +11,3 @@ Difference between Dummy Object, Test Stub, Test Spy, Test Mock
 * Stub Object: 控制SUT的间接输入；Stub提供在测试过程中对请求调用的屏蔽式应答，通常对该测试程序之外的任何内容都无响应。即：Stub只是返回一个规定的值，而不会去涉及到系统的任何改变。它通常是测试中的控制点(control point)。
 * Spy Object: 记录和验证SUT的间接输出；Spy可以看做是一类Stub，但是，它会记录它在被调用后的一些信息
 * Mock Object: 验证SUT和DOC的交互；Mock和Stub有一定的重合性，比较大的区别是 Mock 专注于观察点，而 Stub 专注于 控制点。或者从另一个角度上面来说，Mock会验证行为的变更，而Stub只是状态的一个变化而已。
-
-* https://www.continuousdelivery20.com/blog/tott-stub-faked-mock/
